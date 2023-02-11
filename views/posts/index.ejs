@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<h1>All Posts</h1>
+
+<table id="list">
+    <thead>
+      <tr>
+        <th>Location</th>
+        <th>continent</th>
+        <th>photo</th>
+        <th>rating</th>
+        <th>description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% posts.forEach(function(p) { %>
+        <tr>
+          <td><%= p.location %></td>
+          <td><%= p.continent %></td>
+          <td><%= p.photo %></td>
+          <td><%= p.rating %></td>
+          <td><%= p.description %></td>
+          <td><a href="/show/<%= p._id %>">Post Details</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+
+
+
+<%- include('../partials/footer') %>

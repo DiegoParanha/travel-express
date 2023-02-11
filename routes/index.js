@@ -4,8 +4,9 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home', { title: 'Travel' });
+  res.render('home', { title: 'Travel - Express' });
 });
+
 
 router.get('/auth/google', passport.authenticate(
   // Which passport strategy is being used?

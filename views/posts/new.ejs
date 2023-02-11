@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+
+<h1>Making a New Post</h1>
+
+<form id="new-form" action="/posts" method="POST">
+    <label>Location:</label>
+    <input type="text" name="location" placeholder="Where was your trip">
+    <label>Continent:</label>
+        <select id="continent" name="continent">
+            <option id="disabled-cont" value="none" selected disabled hidden>Select an Option</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Asia">Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+            <option value="Antartica">Antartica</option>
+        </select>
+    <label>Photo:</label>
+    <input type="text" name="photo" placeholder="Show a photo of your trip">
+    <label>Rating:</label>
+    <select name="rating">
+        <option value="none" selected disabled hidden>Give a rating</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <label>Description:</label>
+    <input id="desc-Box" type="text" name="description" wrap="true" placeholder="Tell us about your trip">
+    <input type="submit" value="Add Post">
+</form>
+
+
+<%- include('../partials/footer') %>
