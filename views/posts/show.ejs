@@ -1,22 +1,64 @@
 <%- include('../partials/header') %>
 
 
-<h1><%= User's post %></h1>
-<div>Location:</div>
-<div>Continent:</div>
-<div>Photo:</div>
-<div>Rating:</div>
-<div>Description:</div>
+<h1><%= title %></h1>
+
+<section id="user-page">
+    <div id="location">Location: <%= post.location %></div>
+    <div id="continent">Continent: <%= post.continent %></div>
+    <div id="photo">Photo: <%= post.photo %></div>
+    <div id="rating">Rating: <%= post.rating %></div>
+    <div id="description">Description: <%= post.description %></div>
+</section>
 
 
 
-<div>Comments</div>
-
-
-
-
-
-
+<div id="comBox">
+<% if (user) { %>
+    <form id="commentAdd" method="POST"
+    action="/posts/<%= post._id %>/comments">
+    <label>Comments:</label>
+    <textarea name="content"></textarea>
+    <input type="submit" value="Add Comment">
+  </form>
+  <% } %>
+   
+<% if (post.comments.length) { %>
+    <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Date</th>
+            <th>Comment</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% let total = 0 %>
+          <% post.comments.forEach(function(c) { %>
+            <tr>
+              <td id="comment-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer"> <%= c.userName %></td>
+              <td><%= c.createdAt.toLocaleDateString() %></td>
+              <td><%= c.content %></td>
+              <td>
+                <% if (user?._id.equals(c.user)) { %>
+                    <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                      <button type="submit">X</button>
+                    </form>
+                <% } %>
+              </td>
+            </tr>
+          <% }); %>
+          <tr>
+            <td colspan="2"></td>
+            <td>
+          </tr>
+        </tbody>
+      </table>
+    <% } else { %>
+      <h5>No Comments Yet</h5>
+    <% } %>
+</div>
 
 
 

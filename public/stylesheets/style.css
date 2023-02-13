@@ -95,3 +95,73 @@ a {
 #disabled-cont {
   color: grey;
 }
+
+#continentChoice {
+  display: flex;
+  word-wrap: break-word;
+  margin: 50px;
+}
+
+#user-page {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+#location {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#continent {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#photo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#rating {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#comBox {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  height: 50vmin;
+  border: 5px solid black;
+  border-radius: 5px;
+}
+
+#commentAdd {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#comment-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#comment-user img {
+  border-radius: 50%;
+  height: 40px;
+}

@@ -15,7 +15,7 @@ function index(req, res) {
   };
   
 function show(req, res) {
-      Post.findById(req.params.id, function(err, flight) {
+      Post.findById(req.params.id, function(err, post) {
               res.render('posts/show', { title: 'Post Detail', post });
           });
       };
