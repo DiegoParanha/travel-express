@@ -44,6 +44,7 @@ nav > img {
   align-items: center;
 }
 
+
 body > main {
   grid-area: main;
   display: flex;

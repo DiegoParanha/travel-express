@@ -5,16 +5,36 @@ module.exports ={
     show,
     new: newPost,
     create,
-    edit: editPost,
+    edit,
+    update,
     delete: deletePost,
 }
 
-function deletePost(req, res, next) {
+function deletePost(req, res) {
+  Post.findOneAndDelete(
+    {_id: req.params.id, userRecommending: req.user._id}, function(err) {
+      res.redirect('/posts');
+    }
+  );
+}
 
-};
+function update(req, res) {
+  Post.findOneAndUpdate(
+    {_id: req.params.id, userRecommending: req.user._id},
+    req.body,
+    {new: true},
+    function(err, post) {
+      if (err || !post) return res.redirect('/posts');
+      res.redirect(`/posts/${post._id}`);
+    }
+  );
+}
 
-function editPost(req, res) {
-
+function edit(req, res) {
+  Post.findOne({_id: req.params.id, userRecommending: req.user._id}, function(err, post) {
+    if (err || !post) return res.redirect('/posts');
+    res.render('posts/edit', {post});
+  });
 };
 
 function index(req, res) {

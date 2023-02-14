@@ -13,10 +13,14 @@
     <div id="description">Description: <%= post.description %></div>
 </section>
 
-<% if(user) { %>
+<% if (user?._id.equals(post.user)) { %>
     <section id="actButts">
-        <button id="actionButton" method="PUT" action="/posts/new">✏️</button>
-        <button id="actionButton" method="POST" action="/posts/<%= post._id %>?_method=DELETE">❌</button>
+      <form action="/posts/edit" method="PUT">
+        <button id="actionButton" type="submit">✏️</button>
+      </form>
+      <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+        <button id="actionButton" type="submit" onclick="return confirm('Are you sure you want to delete this post?');">❌</button>
+      </form>
     </section>
 <% } %>
 
@@ -49,11 +53,12 @@
               <td><%= c.content %></td>
               <td>
                 <% if (user?._id.equals(c.user)) { %>
-                    <form action="/comments/<%= c._id %>?_method=PUT" method="PUT">
-                        <button type="edit">✏️</button>
+                    <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
+                      <input type="text" value="<%= c.text %>">
+                      <button type="submit">✏️</button>
                     </form>
                     <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                      <button type="submit">❌</button>
+                      <button type="submit" onclick="return confirm('Are you sure you want to delete this comment?');">❌</button>
                     </form>
                 <% } %>
               </td>
@@ -69,8 +74,6 @@
       <h5>No Comments Yet</h5>
     <% } %>
 </div>
-
-
 
 
 <%- include('../partials/footer') %>

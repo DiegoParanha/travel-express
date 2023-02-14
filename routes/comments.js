@@ -8,7 +8,9 @@ router.post('/posts/:id/comments', ensureLoggedIn, commentsCtrl.create);
 
 router.delete('/comments/:id', ensureLoggedIn, commentsCtrl.delete);
 
+// Doesnt work atm
+router.get('/comments/:id/edit', ensureLoggedIn, commentsCtrl.edit);
 
-router.put('/comments/:id', ensureLoggedIn, commentsCtrl.edit);
+router.put('/comments/:id', ensureLoggedIn, commentsCtrl.update);
 
 module.exports = router;

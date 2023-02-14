@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
-<h1>Making a New Post</h1>
+<h1>Updating a Post</h1>
 
-<form id="new-form" action="/posts" method="POST">
+<form id="update-form" action="/posts" method="GET">
     <label>Location:</label>
     <input type="text" name="location" placeholder="Where was your trip? Be specfic.">
     <label>Continent:</label>
@@ -34,7 +34,7 @@
     </select>
     <label>Description:</label>
     <textarea id="desc-Box" type="text" name="description" wrap="true" placeholder="Tell us about your trip"></textarea>
-    <input type="submit" value="Add Post">
+    <input type="submit" value="Update Post">
 </form>
 
 
