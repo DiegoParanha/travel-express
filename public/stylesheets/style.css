@@ -24,6 +24,26 @@ nav > img {
   margin-right: auto;
 }
 
+#avatarPic {
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#userAva {
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body > main {
   grid-area: main;
   display: flex;
@@ -107,6 +127,20 @@ a {
   grid-gap: 1rem;
 }
 
+#postAvatar {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+
+#postUserName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 #location {
   display: flex;
   justify-content: center;
@@ -132,18 +166,30 @@ a {
 }
 
 #description {
+  border: 1.5px solid black;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
+#actButts {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#actionButton {
+  display: inline-block; 
+  margin: 0 auto;
+  width: calc(50% - 4px);
+}
+
+
 #comBox {
   display: flex;
-  align-self: center;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
-  margin-top: 10px;
-  display: flex;
+  margin-top: 20px;
   height: 50vmin;
   border: 5px solid black;
   border-radius: 5px;
@@ -151,8 +197,14 @@ a {
 
 #commentAdd {
   display: flex;
+  height: 50px;
   justify-content: center;
   margin: 10px;
+}
+
+#textArea {
+  height: 4vh;
+  width: 80vh;
 }
 
 #comment-user {

@@ -4,6 +4,8 @@
 <h1><%= title %></h1>
 
 <section id="user-page">
+    <img id="postAvatar" src="<%= post.userAvatar %>">
+    <div id="postUserName"><%= post.userName %></div>
     <div id="location">Location: <%= post.location %></div>
     <div id="continent">Continent: <%= post.continent %></div>
     <div id="photo">Photo: <%= post.photo %></div>
@@ -11,6 +13,12 @@
     <div id="description">Description: <%= post.description %></div>
 </section>
 
+<% if(user) { %>
+    <section id="actButts">
+        <button id="actionButton" method="PUT" action="/posts/new">✏️</button>
+        <button id="actionButton" method="POST" action="/posts/<%= post._id %>?_method=DELETE">❌</button>
+    </section>
+<% } %>
 
 
 <div id="comBox">
@@ -18,7 +26,7 @@
     <form id="commentAdd" method="POST"
     action="/posts/<%= post._id %>/comments">
     <label>Comments:</label>
-    <textarea name="content"></textarea>
+    <textarea id="textArea" name="content"></textarea>
     <input type="submit" value="Add Comment">
   </form>
   <% } %>
@@ -34,7 +42,6 @@
           </tr>
         </thead>
         <tbody>
-          <% let total = 0 %>
           <% post.comments.forEach(function(c) { %>
             <tr>
               <td id="comment-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer"> <%= c.userName %></td>
@@ -42,8 +49,11 @@
               <td><%= c.content %></td>
               <td>
                 <% if (user?._id.equals(c.user)) { %>
+                    <form action="/comments/<%= c._id %>?_method=PUT" method="PUT">
+                        <button type="edit">✏️</button>
+                    </form>
                     <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                      <button type="submit">X</button>
+                      <button type="submit">❌</button>
                     </form>
                 <% } %>
               </td>
@@ -59,7 +69,6 @@
       <h5>No Comments Yet</h5>
     <% } %>
 </div>
-
 
 
 

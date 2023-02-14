@@ -1,10 +1,11 @@
 <%- include('../partials/header') %>
 
-<h1>All Posts</h1>
-
+<h1><%= title %></h1>
+<% if (posts.length) { %>
 <table id="list">
     <thead>
       <tr>
+        <th>User</th>
         <th>Location</th>
         <th>Continent</th>
         <th>Photo</th>
@@ -15,18 +16,19 @@
     <tbody>
       <% posts.forEach(function(p) { %>
         <tr>
+          <td><img id ="userAva" src ="<%= p.userAvatar %>" referrerpolicy="no-referrer"><%= p.userName%></td>
           <td><%= p.location %></td>
           <td><%= p.continent %></td>
           <td><%= p.photo %></td>
           <td><%= p.rating %></td>
           <td><%= p.description %></td>
-          <td><a href="/posts/<%= p._id %>">Post Details</a></td>
+          <td><a href="/posts/<%= p._id %>">Details</a></td>
         </tr>
         <% }); %>
       </tbody>
     </table>
-
-
-
+    <% } else { %>
+      <h3>No Posts Yet</h3>
+    <% } %>
 
 <%- include('../partials/footer') %>

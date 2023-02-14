@@ -3,6 +3,22 @@ const Post = require('../models/post');
 module.exports = {
     create, 
     delete: deleteComment,
+    edit: editComment,
+};
+
+function editComment(req, res) {
+    Post.findOne({
+        'comments._id': req.params.id,
+        'comments.user': req.user._id
+    }).then(function(post) {
+        if(!post) return res.redirect('/posts');
+        post.comments.edit(req.params.id);
+        post.save().then(function() {
+            res.redirect(`/posts/${post._id}`);
+        }).catch(function(err) {
+            return next(err);
+        })
+    });
 };
 
 
@@ -14,14 +30,12 @@ function deleteComment(req, res, next) {
         if(!post) return res.redirect('/posts');
         post.comments.remove(req.params.id);
         post.save().then(function() {
-            req.redirect(`/posts/${post._id}`);
+            res.redirect(`/posts/${post._id}`);
         }).catch(function(err) {
-            return rext(err);
+            return next(err);
         })
     });
 };
-
-
 
 function create(req, res) {
     Post.findById(req.params.id, function(err, post) {

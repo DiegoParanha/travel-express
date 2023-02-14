@@ -8,4 +8,7 @@ router.post('/posts/:id/comments', ensureLoggedIn, commentsCtrl.create);
 
 router.delete('/comments/:id', ensureLoggedIn, commentsCtrl.delete);
 
+
+router.put('/comments/:id', ensureLoggedIn, commentsCtrl.edit);
+
 module.exports = router;

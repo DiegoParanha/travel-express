@@ -20,13 +20,21 @@ const commentsSchema = new Schema({
 
 
 const postSchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    userName: String,
+    userAvatar: String,
     location: {
         type: String,
         requried: true
     },
     continent: {
         type: String,
-        enum: ['North America', 'South America', 'Asia', 'Africa', 'Europe', 'Oceania', 'Antartica']
+        enum: ['North America', 'South America', 'Asia', 'Africa', 'Europe', 'Oceania', 'Antartica'],
+        required: true
     },
     photo: {
         type: String,
