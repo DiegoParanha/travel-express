@@ -12,7 +12,7 @@ module.exports ={
 
 function deletePost(req, res) {
   Post.findOneAndDelete(
-    {_id: req.params.id, userRecommending: req.user._id}, function(err) {
+    {_id: req.params.id, user: req.user._id}, function(err) {
       res.redirect('/posts');
     }
   );
@@ -20,7 +20,7 @@ function deletePost(req, res) {
 
 function update(req, res) {
   Post.findOneAndUpdate(
-    {_id: req.params.id, userRecommending: req.user._id},
+    {_id: req.params.id, user: req.user._id},
     req.body,
     {new: true},
     function(err, post) {
@@ -31,7 +31,7 @@ function update(req, res) {
 }
 
 function edit(req, res) {
-  Post.findOne({_id: req.params.id, userRecommending: req.user._id}, function(err, post) {
+  Post.findOne({_id: req.params.id, user: req.user._id}, function(err, post) {
     if (err || !post) return res.redirect('/posts');
     res.render('posts/edit', {post});
   });

@@ -6,7 +6,7 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="icon" href="plane-icon.jpeg">
+    <link rel="icon" href="/images/plane-pic.png">
   </head>
   <body>
  
@@ -15,18 +15,17 @@
     <p>Browse posts from all users for recommended travel spots</p>
     <p>Log in to create your own posts and write comments</p>
 
-    <table>
-    <a id="continentChoice" href="/posts?continent=North America">North America</a>
-    <a id="continentChoice" href="/posts?continent=South America">South America</a>
-    <a id="continentChoice" href="/posts?continent=Asia">Asia</a>
-    <a id="continentChoice" href="/posts?continent=Europe">Europe</a>
-    <a id="continentChoice" href="/posts?continent=Afria">Africa</a>
-    <a id="continentChoice" href="/posts?continent=Oceania">Oceania</a>
-    <a id="continentChoice" href="/posts?continent=Antartica">Antartica</a>
-    </table>
-
-
+    <section id="continentChoice">
+      <a class="NA" href="/posts?continent=North America"><img src="/images/NA.png">North America</a>
+      <a class="SA" href="/posts?continent=South America"><img src="/images/SA.png">South America</a>
+      <a class="Asia" href="/posts?continent=Asia"><img src="/images/asia.png">Asia</a>
+      <a class="EU" href="/posts?continent=Europe"><img src="/images/Europe.png">Europe</a>
+      <a class="AF" href="/posts?continent=Afria"><img src="/images/africa.png">Africa</a>
+      <a class="OCE" href="/posts?continent=Oceania"><img src="/images/oceania.png">Oceania</a>
+      <a class="ANT" href="/posts?continent=Antartica"><img src="/images/antartica.png">Antartica</a>
+    </section>
   </body>
+
 </html>
 
 

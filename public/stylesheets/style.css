@@ -7,15 +7,27 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #FFFAF0;
 }
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: #778899;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 20px 0 30px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 nav > img {
@@ -44,7 +56,6 @@ nav > img {
   align-items: center;
 }
 
-
 body > main {
   grid-area: main;
   display: flex;
@@ -64,7 +75,7 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: black;
-  background-color: #424748;
+  background-color: #B0C4DE;
 }
 
 nav > a.active {
@@ -97,7 +108,6 @@ a {
   border-radius: 5px;
 }
 
-
 #new-form input[type="submit"] {
   grid-column: span 2;
   width: 10rem;
@@ -115,12 +125,6 @@ a {
 
 #disabled-cont {
   color: grey;
-}
-
-#continentChoice {
-  display: flex;
-  word-wrap: break-word;
-  margin: 50px;
 }
 
 #user-page {
@@ -176,15 +180,14 @@ a {
 
 #actButts {
   width: 300px;
-  margin: 0 auto;
+  display: inline-flex;
 }
 
 #actionButton {
-  display: inline-block; 
+  display: inline; 
+  width: 150px;
   margin: 0 auto;
-  width: calc(50% - 4px);
 }
-
 
 #comBox {
   display: flex;
@@ -218,3 +221,107 @@ a {
   border-radius: 50%;
   height: 40px;
 }
+
+/* #list {
+
+}
+
+#top-list {
+
+}
+
+#bottom-list {
+
+} */
+
+
+#continentChoice {
+  display: grid;
+  grid-template-columns: 250px 200px 100px;
+  justify-content: space-evenly;
+}
+
+.NA {
+  width: 200px;
+  margin: 0px 0px 0px 0px;
+}
+
+.NA img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.SA {
+  width: 100px;
+  margin: 0px 0px 0px 0px;
+}
+
+.SA img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.Asia {
+  width: 100px;
+  margin: 0px 0px 0px 0px;
+}
+
+.Asia img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.AF {
+  width: 100px;
+  margin: 0px 0px 0px 0px;
+}
+
+.AF img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.EU {
+  width: 100px;
+  margin: 0px 0px 0px 0px;
+}
+
+.EU img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.OCE {
+  width: 100px;
+  margin: 0px 0px 0px 0px;
+}
+
+.OCE img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.ANT {
+  width: 100px;
+  margin: 0px 0px 0px 0px;
+}
+
+.ANT img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+/* .visible-form {
+  visibility: visible;
+}
+
+.invisible-form {
+  visibility: hidden;
+} */

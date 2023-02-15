@@ -17,8 +17,8 @@ function edit(req, res) {
 function update(req, res) {
     Post.findOne({'comments._id': req.params.id}, function(err, post) {
       const commentSubdoc = post.comments.id(req.params.id);
-      if (!commentSubdoc.userId.equals(req.user._id)) return res.redirect(`/posts/${post._id}`);
-      commentSubdoc.text = req.body.text;
+      if (!commentSubdoc.user.equals(req.user._id)) return res.redirect(`/posts/${post._id}`);
+      commentSubdoc.content = req.body.text;
       post.save(function(err) {
         res.redirect(`/posts/${post._id}`);
       });
