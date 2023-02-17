@@ -9,12 +9,12 @@
 </div>
 
 # 🌟 Screenshots
-<img src="https://imgur.com/a/QxLhxuG">
-<img src="https://imgur.com/a/Xf5pivS">
-<img src="https://imgur.com/a/lwJ3141">
-<img src="https://imgur.com/a/CTvFXrG">
-<img src="https://imgur.com/a/el1kEOR">
-<img src="https://imgur.com/a/RCRNpXP">
+<img src="https://i.imgur.com/p0DA42b.png">
+<img src="https://i.imgur.com/krUYyGc.png">
+<img src="https://i.imgur.com/0rvhams.png">
+<img src="https://i.imgur.com/LmxH4Xg.png">
+<img src="https://i.imgur.com/a2p708W.png">
+<img src="https://i.imgur.com/y2ekgC2.png">
 <img src="">
 
 
