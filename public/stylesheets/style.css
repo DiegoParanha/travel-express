@@ -2,7 +2,7 @@
   box-sizing: border-box;
   font-family: Helvetica;
   /* color: #424748; */
-  color: rgb(255, 255, 255);
+  color: silver;
 }
 
 html {
@@ -151,7 +151,7 @@ a {
 }
 
 #disabled-cont {
-  color: grey;
+  background-color: grey;
 }
 
 #user-page {
