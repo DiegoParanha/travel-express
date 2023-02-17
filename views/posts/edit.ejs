@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 
-<h1>Updating a Post</h1>
+<h1>Updating your Post</h1>
 
-<form id="new-form" action="/posts" method="GET">
+<form id="new-form" action="/posts" method="PUT">
     <label>Location:</label>
     <input type="text" name="location" value="<%= post.location%>">
     <label>Continent:</label>
         <select name="continent">
-            <option id="disabled-cont" value="none" selected disabled hidden>Select an Option</option>
+            <option id="disabled-cont" value="<%= post.continent %>" selected disabled hidden>Select an Option </option>
             <option value="North America">North America</option>
             <option value="South America">South America</option>
             <option value="Asia">Asia</option>
@@ -20,7 +20,7 @@
     <input type="text" name="photo" value="<%= post.photo%>">
     <label>Rating:</label>
     <select name="rating">
-        <option value="none" selected disabled hidden>Give a rating</option>
+        <option value="<%= post.rating %>" selected disabled hidden>Give a rating</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -33,7 +33,7 @@
         <option value="10">10</option>
     </select>
     <label>Description:</label>
-    <textarea id="desc-Box" type="text" name="description" wrap="true" value="<%= post.description %>"></textarea>
+    <textarea id="desc-Box" type="text" name="description" wrap="true" value="<%= post.description%>"></textarea>
     <input type="submit" value="Update Post">
 </form>
 

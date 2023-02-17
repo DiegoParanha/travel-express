@@ -5,30 +5,32 @@
 <table id="list">
     <thead>
       <tr id="top-list">
-        <th>User</th>
-        <th>Location</th>
-        <th>Continent</th>
-        <th>Photo</th>
-        <th>Rating</th>
-        <th>Description</th>
+        <th id="top-listing-user">User</th>
+        <th id="top-listing-loca">Location</th>
+        <th id="top-listing">Continent</th>
+        <th id="top-listing">Photo</th>
+        <th id="top-listing">Rating</th>
+        <th id="top-listing">Description</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="body-list">
       <% posts.forEach(function(p) { %>
         <tr id="bottom-list">
-          <td><img id ="userAva" src ="<%= p.userAvatar %>" referrerpolicy="no-referrer"><%= p.userName%></td>
-          <td><%= p.location %></td>
-          <td><%= p.continent %></td>
-          <td><%= p.photo %></td>
-          <td><%= p.rating %></td>
-          <td><%= p.description %></td>
-          <td><a href="/posts/<%= p._id %>">Details</a></td>
+          <td id="bottom-listings-user"><img id ="userAva" src ="<%= p.userAvatar %>" referrerpolicy="no-referrer"><%= p.userName%></td>
+          <td id="bottom-listings-loca"><%= p.location %></td>
+          <td id="bottom-listings-cont"><%= p.continent %></td>
+          <td id="bottom-listings-img">Details to view</td>
+          <!-- <%= p.photo %> -->
+          <td id="bottom-listings"><%= p.rating %></td>
+          <td id="bottom-listings-desc">Details to view</td>
+           <!-- <%= p.description %> -->
+          <td id="bottom-listings" ><a class="deets" href="/posts/<%= p._id %>">Details</a></td>
         </tr>
         <% }); %>
       </tbody>
     </table>
     <% } else { %>
-      <h3>No Posts Yet. Be the First!</h3>
+      <h3 id="no-post">No Posts Yet. Be the First!</h3>
     <% } %>
 
 <%- include('../partials/footer') %>

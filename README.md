@@ -9,9 +9,12 @@
 </div>
 
 # 🌟 Screenshots
-<img src="">
-<img src="">
-<img src="">
+<img src="https://imgur.com/a/QxLhxuG">
+<img src="https://imgur.com/a/Xf5pivS">
+<img src="https://imgur.com/a/lwJ3141">
+<img src="https://imgur.com/a/CTvFXrG">
+<img src="https://imgur.com/a/el1kEOR">
+<img src="https://imgur.com/a/RCRNpXP">
 <img src="">
 
 
