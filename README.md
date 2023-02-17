@@ -15,8 +15,6 @@
 <img src="https://i.imgur.com/LmxH4Xg.png">
 <img src="https://i.imgur.com/a2p708W.png">
 <img src="https://i.imgur.com/y2ekgC2.png">
-<img src="">
-
 
 # 💻 Technologies Used
 - ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)

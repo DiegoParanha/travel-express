@@ -17,6 +17,11 @@ body {
   background-color: #FFFAF0;
 }
 
+#plane-pic {
+  width: 50px;
+  margin-right: -10px;
+}
+
 body > nav {
   grid-area: nav;
   background-color: #778899;
