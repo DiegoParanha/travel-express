@@ -4,6 +4,8 @@
 
 ###  [Go to Travel-Express](https://travel-express1.herokuapp.com/)
 
+[![LinkedIn Badge](https://img.shields.io/badge/-@DiegoParanhos14-blue?style=flat&logo=Linkedin&logoColor=black)](https://www.linkedin.com/in/diegoparanhos14/)
+
 
  A website where you can upload posts to show off or give advice of some travel spots for all users to see.
 </div>
