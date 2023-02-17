@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  /* color: #424748; */
+  color: rgb(255, 255, 255);
 }
 
 html {
@@ -14,7 +15,8 @@ body {
   margin: 0;
   /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #FFFAF0;
+  /* background-color: #FFFAF0; */
+  background-color: #2b2f32;
 }
 
 #plane-pic {
@@ -22,9 +24,19 @@ body {
   margin-right: -10px;
 }
 
+#photo-link {
+  margin-left: 5px;
+  color: rgb(58, 130, 146);
+}
+
+#photo-link:hover {
+  color: rgb(221, 145, 145);
+}
+
 body > nav {
   grid-area: nav;
-  background-color: #778899;
+  /* background-color: #778899; */
+  background-color: rgb(38, 101, 111);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +101,7 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: black;
-  background-color: #B0C4DE;
+  background-color: #ffffff;
 }
 
 nav > a.active {
@@ -331,7 +343,7 @@ a {
 }
 
 .NA:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .NA img {
@@ -349,7 +361,7 @@ a {
 }
 
 .SA:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .SA img {
@@ -367,7 +379,7 @@ a {
 }
 
 .Asia:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .Asia img {
@@ -392,7 +404,7 @@ a {
 }
 
 .AF:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .EU {
@@ -410,7 +422,7 @@ a {
 }
 
 .EU:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .OCE {
@@ -428,7 +440,7 @@ a {
 }
 
 .OCE:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .ANT {
@@ -447,7 +459,7 @@ a {
 }
 
 .ANT:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 #no-post {
@@ -458,7 +470,7 @@ a {
 }
 
 #footer {
-  margin-top: 45vh;
+  margin-top: 35vh;
   color: silver;
   font-size: 15px;
   display: flex;
@@ -466,10 +478,10 @@ a {
 }
 
 .deets {
-  color: rgb(109,141,142);
+  color: rgb(56, 116, 132);
 }
 .deets:hover {
-  color:black;
+  color:rgb(221, 145, 145);
 }
 
 /* .visible-form {
